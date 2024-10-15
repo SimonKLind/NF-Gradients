@@ -4,8 +4,11 @@ This repository contains code and images accompanying the publication "<I>Making
 # Runnable files
 The following files should be runnable with little effort (with dependencies: PyTorch, TorchVision, OpenCV, NumPy), as long as you have an appropriate dataset of images:
  - frcnn_features.py: This file will run a ResNet-based Faster-RCNN from TorchVision, and extract features that can subsequently be used to train a Normalizing Flow.
- - train_NF.py: This file will train a Normalizing Flow on features extracted by frcnn_features.py.
- - eval_frcnn_NF.py: This file will run visualizations of the Normalizing Flow gradients, like the ones in our paper.
+ - train_realnvp.py: This file will train a Normalizing Flow on features extracted by frcnn_features.py.
+ - eval_frcnn_nvp.py: This file will run visualizations of the Normalizing Flow gradients, like the ones in our paper.
+
+Side note for anyone wondering: when we started this work we used a RealNVP model (a specific Normalizing Flow architecture for images).
+What we have now cannot reasonably be called a RealNVP, but the naming persists in many of our files...
 
 # Non-Runnable files
 The following files are not assumed to be runnable, as they are <B>heavily</B> specialized for our robot setup (we include them here only for completeness):
